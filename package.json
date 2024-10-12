@@ -10,7 +10,10 @@
     "test:unit": "vitest"
   },
   "dependencies": {
+    "@primevue/themes": "^4.1.0",
     "pinia": "^2.2.4",
+    "primeflex": "^3.3.1",
+    "primevue": "^4.1.0",
     "vue": "^3.5.11",
     "vue-router": "^4.4.5"
   },
@@ -18,6 +21,7 @@
     "@vitejs/plugin-vue": "^5.1.4",
     "@vue/test-utils": "^2.4.6",
     "jsdom": "^25.0.1",
+    "sass-embedded": "^1.79.5",
     "vite": "^5.4.8",
     "vite-plugin-vue-devtools": "^7.4.6",
     "vitest": "^2.1.2"

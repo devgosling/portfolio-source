@@ -1,35 +1,57 @@
-@import './base.css';
+:root {
+  font-family: "Inter var", sans-serif;
+  font-weight: 400;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  font-variation-settings: normal;
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+  --primarytextcolor: rgb(226, 232, 240);
+  --secondarytextcolor: rgb(148, 163, 184);
 }
 
-a,
-.green {
+.primarytext {
+  color: var(--primarytextcolor);
+}
+
+.secondarytext {
+  color: var(--secondarytextcolor);
+}
+
+a {
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
-}
+  font-weight: 500;
+  color: var(--primarytextcolor);
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+  transition: 0.15s;
+
+  &:hover {
+    color: rgb(68, 225, 236);
   }
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+body {
+  background-color: rgb(15,23,42);
+  padding: 0;
+  margin: 0;
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+  width: 100vw;
+  height: 100vh;
+
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: "Inter var";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: "Regular";
+  src: url("./fonts/Inter-roman.var.woff2?v=3.19") format("woff2");
+}
+@font-face {
+  font-family: "Inter var";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+  font-named-instance: "Italic";
+  src: url("./fonts/Inter-italic.var.woff2?v=3.19") format("woff2");
 }
