@@ -29,16 +29,22 @@ export default {
         'pointer-events': 'none',
         'background': `radial-gradient(600px at ${this.mouseX}px ${this.mouseY}px, rgba(29, 78, 216, 0.15), transparent 80%)`
       }
+    },
+
+    hasTouch() {
+      return 'ontouchstart' in document.documentElement
+             || navigator.maxTouchPoints > 0
+             || navigator.msMaxTouchPoints > 0;
     }
   },
 
   mounted() {
     document.onmousemove = (event) => {
+      if (window.screen.width <= 1024) return;
       let gradient = document.getElementById("radial-gradient-mouse")
       this.mouseX = event.clientX
       this.mouseY = event.clientY
     }
-
   }
 }
 </script>
@@ -47,5 +53,24 @@ export default {
   max-width: 79.8vw;
   padding: 0 10.2vw;
   margin: 0 10.2vw;
+}
+
+
+@media screen and (max-width: 1200px) {
+  /*Tablets*/
+  .routerview {
+    max-width: 90vw;
+    padding: 0 5vw;
+    margin: 0 5vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /*Phones*/
+  .routerview {
+    max-width: 95vw;
+    padding: 0 2.5vw;
+    margin: 0 2.5vw;
+  }
 }
 </style>

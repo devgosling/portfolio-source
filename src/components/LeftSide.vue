@@ -95,6 +95,9 @@ export default {
   font-size: 1.5rem;
 
   gap: 1rem;
+
+  color: rgb(148, 163, 184);
+
 }
 
 .social {
@@ -185,4 +188,53 @@ export default {
   background-color: var(--primarytextcolor);
 }
 
+
+@media screen and (max-width: 1200px) {
+  /*Tablets*/
+
+  .leftside {
+    position: relative;
+    height: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .socials {
+    position: relative;
+    margin-top: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /*Phones*/
+
+  .leftside {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .leftside .upper .name {
+    font-size: 2.8rem;
+  }
+
+  .leftside .upper .job {
+    font-size: 1.1rem;
+  }
+
+  .leftside .upper .catchline {
+    width: 100%;
+  }
+
+  .social {
+    font-size: 1.3rem;
+  }
+
+  .social:hover {
+    color: inherit;
+  }
+}
 </style>

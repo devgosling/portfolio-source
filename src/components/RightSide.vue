@@ -49,4 +49,28 @@ export default {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+
+
+@media screen and (max-width: 1200px) {
+  /*Tablets*/
+  .rightside {
+    padding-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /*Phones*/
+  .rightside {
+    padding-top: 1rem;
+  }
+
+  .rightside .about-p {
+    font-size: 0.9rem;
+  }
+
+  .rightside .credits-p {
+    width: 100%;
+    font-size: 0.8rem;
+  }
+}
 </style>

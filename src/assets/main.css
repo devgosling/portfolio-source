@@ -55,3 +55,10 @@ body {
   font-named-instance: "Italic";
   src: url("./fonts/Inter-italic.var.woff2?v=3.19") format("woff2");
 }
+
+@media screen and (max-width: 1200px) {
+  /*Tablets*/
+  a:hover {
+    color: var(--primarytextcolor);
+  }
+}

@@ -23,4 +23,13 @@ export default {
 
   position: relative;
 } 
+
+
+@media screen and (max-width: 1200px) {
+  /*Tablets*/
+  .portofolio {
+    display: flex;
+    flex-direction: column;
+  }
+}
 </style>

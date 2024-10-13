@@ -85,10 +85,12 @@ export default {
     },
 
     mounted() {
+
         const experienceElements = document.querySelectorAll(".experience-element")
 
         experienceElements.forEach((experienceElement) => {
             experienceElement.addEventListener("mouseenter", () => {
+                if (window.screen.width <= 1024) return;
                 experienceElements.forEach(b => b.setAttribute("data-state", "not-hovered"))
                 experienceElement.setAttribute("data-state", "neutral")
             })
@@ -96,6 +98,7 @@ export default {
 
         experienceElements.forEach((experienceElement) => {
             experienceElement.addEventListener("mouseleave", () => {
+                if (window.screen.width <= 1024) return;
                 experienceElements.forEach(b => b.setAttribute("data-state", "neutral"))
             })
         })
@@ -202,5 +205,42 @@ export default {
 .experience-tag .p-tag-label {
     font-weight: 500;
     padding: 0.1rem;
+}
+
+@media screen and (max-width: 1200px) {
+  /*Tablets*/
+  .experience-element:hover {
+    background-color: inherit;
+    box-shadow: inherit;
+  }
+  
+  .experience-element:hover * .experience-title {
+    color: inherit;
+  }
+  
+  .experience-element:hover * .experience-title-arrow {
+    transform: inherit;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  /*Phones*/
+  .experience {
+    padding-top: 3rem;
+  }
+
+  .experience-element {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .period {
+    padding-bottom: 0.2rem;
+  }
+
+  .experience-description {
+    font-size: 0.85rem;
+  }
 }
 </style>
