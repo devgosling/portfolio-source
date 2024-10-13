@@ -62,3 +62,215 @@ body {
     color: var(--primarytextcolor);
   }
 }
+
+
+.fadein {
+  opacity: 0;
+  transform: translateY(2.5rem);
+  animation: 500ms fadein;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadein {
+  from { transform: translateY(2.5rem); opacity: 0; }
+  to { transform: translateY(0%); opacity: 1; }
+}
+.d100ms {
+  animation-delay: 100ms;
+}
+
+.d200ms {
+  animation-delay: 200ms;
+}
+
+.d300ms {
+  animation-delay: 300ms;
+}
+
+.d400ms {
+  animation-delay: 400ms;
+}
+
+.d500ms {
+  animation-delay: 500ms;
+}
+
+.d600ms {
+  animation-delay: 600ms;
+}
+
+.d700ms {
+  animation-delay: 700ms;
+}
+
+.d800ms {
+  animation-delay: 800ms;
+}
+
+.d900ms {
+  animation-delay: 900ms;
+}
+
+.d1000ms {
+  animation-delay: 1000ms;
+}
+
+.d1100ms {
+  animation-delay: 1100ms;
+}
+
+.d1200ms {
+  animation-delay: 1200ms;
+}
+
+.d1300ms {
+  animation-delay: 1300ms;
+}
+
+.d1400ms {
+  animation-delay: 1400ms;
+}
+
+.d1500ms {
+  animation-delay: 1500ms;
+}
+
+.d1600ms {
+  animation-delay: 1600ms;
+}
+
+.d1700ms {
+  animation-delay: 1700ms;
+}
+
+.d1800ms {
+  animation-delay: 1800ms;
+}
+
+.d1900ms {
+  animation-delay: 1900ms;
+}
+
+.d2000ms {
+  animation-delay: 2000ms;
+}
+
+.d2100ms {
+  animation-delay: 2100ms;
+}
+
+.d2200ms {
+  animation-delay: 2200ms;
+}
+
+.d2300ms {
+  animation-delay: 2300ms;
+}
+
+.d2400ms {
+  animation-delay: 2400ms;
+}
+
+.d2500ms {
+  animation-delay: 2500ms;
+}
+
+.d2600ms {
+  animation-delay: 2600ms;
+}
+
+.d2700ms {
+  animation-delay: 2700ms;
+}
+
+.d2800ms {
+  animation-delay: 2800ms;
+}
+
+.d2900ms {
+  animation-delay: 2900ms;
+}
+
+.d3000ms {
+  animation-delay: 3000ms;
+}
+
+.d3100ms {
+  animation-delay: 3100ms;
+}
+
+.d3200ms {
+  animation-delay: 3200ms;
+}
+
+.d3300ms {
+  animation-delay: 3300ms;
+}
+
+.d3400ms {
+  animation-delay: 3400ms;
+}
+
+.d3500ms {
+  animation-delay: 3500ms;
+}
+
+.d3600ms {
+  animation-delay: 3600ms;
+}
+
+.d3700ms {
+  animation-delay: 3700ms;
+}
+
+.d3800ms {
+  animation-delay: 3800ms;
+}
+
+.d3900ms {
+  animation-delay: 3900ms;
+}
+
+.d4000ms {
+  animation-delay: 4000ms;
+}
+
+.d4100ms {
+  animation-delay: 4100ms;
+}
+
+.d4200ms {
+  animation-delay: 4200ms;
+}
+
+.d4300ms {
+  animation-delay: 4300ms;
+}
+
+.d4400ms {
+  animation-delay: 4400ms;
+}
+
+.d4500ms {
+  animation-delay: 4500ms;
+}
+
+.d4600ms {
+  animation-delay: 4600ms;
+}
+
+.d4700ms {
+  animation-delay: 4700ms;
+}
+
+.d4800ms {
+  animation-delay: 4800ms;
+}
+
+.d4900ms {
+  animation-delay: 4900ms;
+}
+
+.d5000ms {
+  animation-delay: 5000ms;
+}

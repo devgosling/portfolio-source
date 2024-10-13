@@ -1,8 +1,8 @@
 <template>
     <div class="projects">
-        <span class="title primarytext" id="projects">PROJEKTE</span>
+        <span class="title primarytext fadein d2600ms" id="projects">PROJEKTE</span>
         <div class="project-container">
-            <a class="project-element" data-state="neutral" v-for="project in projects" :key="project.index" :href="project.link" target="_blank">
+            <a :class="'project-element fadein d' + ((index + 1) * 100 + 2600) + 'ms'" data-state="neutral" v-for="(project, index) in projects" :key="project.index" :href="project.link" target="_blank">
                 <img class="project-img" :src="'/portfolio' + project.image" alt="" draggable="false">
                 <div class="project-content">
                     <span class="project-title">{{ project.title }} <i v-if="project.link" class="fa-solid fa-arrow-up-right project-title-arrow"></i></span>
@@ -14,7 +14,7 @@
                 </div>
             </a>
         </div>
-        <span class="subtitle primarytext">Und noch vieles mehr...</span>
+        <span class="subtitle primarytext fadein d3200ms">Und noch vieles mehr...</span>
     </div>
 </template>
 <script>

@@ -9,11 +9,26 @@
 .email-link {
     position: fixed;
     font-size: 1rem;
-    right: calc(0vw - 3rem);
-    bottom: 0;
+    right: calc(0vw - 1rem);
+    bottom: -25rem;
     rotate: 90deg;
-    transform: translateX(-80%);
+    transform: translateX(-100%);
     transition: 0.15s;
+
+    animation-name: emailpopup;
+    animation-delay: 2000ms;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes emailpopup {
+    from {
+        bottom: -25rem;
+    }
+
+    to {
+        bottom: 0rem;
+    }
 }
 
 .email-link a {
@@ -22,7 +37,7 @@
 }
 
 .email-link:hover {
-    transform: translateX(calc(-80% - 2rem));    
+    transform: translateX(calc(-100% - 2rem));    
 }
 
 .email-link::after {

@@ -1,21 +1,21 @@
 <template>
     <div class="leftside">
       <div class="upper">
-        <span class="name primarytext">Steven Kukla</span>
-        <span class="job primarytext">Hobby Fullstack Developer</span>
-        <span class="catchline secondarytext">Ich erstelle qualitative, ansprechende, und zugängliche digitale Erlebnisse.</span>
-        <span class="email"><a href="mailto:devgosling@googlemail.com">devgosling@googlemail.com</a></span>
+        <span class="name primarytext d400ms fadein">Steven Kukla</span>
+        <span class="job primarytext d600ms fadein">Hobby Fullstack Developer</span>
+        <span class="catchline secondarytext d700ms fadein">Ich erstelle qualitative, ansprechende, und zugängliche digitale Erlebnisse.</span>
+        <span class="email d800ms fadein"><a href="mailto:devgosling@googlemail.com">devgosling@googlemail.com</a></span>
       </div>
       <div class="navigation">
-        <span class="navpoint" @click="navigateTo(0)" :data-active="navIndex == 0">ÜBER MICH</span>
-        <span class="navpoint" @click="navigateTo(1)" :data-active="navIndex == 1">ERFAHRUNG</span>
-        <span class="navpoint" @click="navigateTo(2)" :data-active="navIndex == 2">PROJEKTE</span>
+        <span class="navpoint fadein d900ms" @click="navigateTo(0)" :data-active="navIndex == 0">ÜBER MICH</span>
+        <span class="navpoint fadein d1000ms" @click="navigateTo(1)" :data-active="navIndex == 1">ERFAHRUNG</span>
+        <span class="navpoint fadein d1100ms" @click="navigateTo(2)" :data-active="navIndex == 2">PROJEKTE</span>
         <!--<span class="navpoint" @click="navigateTo(3)" :data-active="navIndex == 3">PROGRAMMIERSPRACHEN</span>
         <span class="navpoint" @click="navigateTo(4)" :data-active="navIndex == 4">LIBRARIES & FRAMEWORKS</span>
         <span class="navpoint" @click="navigateTo(5)" :data-active="navIndex == 5">TOOLS & PLATTFORMEN</span>-->
       </div>
       <div class="socials">
-        <a class="social" v-for="social in socials" :href="social[1]" target="_blank"><i :class="social[0]"></i></a>
+        <a :class="'social fadein d' + (parseInt(index) * 100 + 1300) + 'ms'" v-for="(social, index) in socials" :href="social[1]" target="_blank"><i :class="social[0]"></i></a>
       </div>
     </div>
 </template>
@@ -150,7 +150,7 @@ export default {
 .navigation .navpoint {
   position: relative;
 
-  transform: translateX(3rem);
+  left: 3rem;
   padding: 0.7rem 0;
   padding-right: 1rem;
   padding-left: 3rem;
@@ -179,7 +179,7 @@ export default {
 
 .navigation .navpoint[data-active="true"],
 .navigation .navpoint:hover {
-  transform: translateX(5rem);
+  left: 5rem;
   color: var(--primarytextcolor);
 
   padding-left: 5rem;
