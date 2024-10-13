@@ -54,10 +54,22 @@ export default {
 
       onScrollElements.forEach((scrollElement) => {
         var distanceToView = scrollElement.getBoundingClientRect().top - window.innerHeight + 20;
-        console.log(distanceToView);
         if (distanceToView < 0 && scrollElement.classList.contains("fadeinonscroll")) {
           scrollElement.classList.add("fadein")
           scrollElement.classList.remove("fadeinonscroll")
+
+          let waitTime = 0;
+          scrollElement.classList.forEach(classTag => { 
+            if (classTag.endsWith("ms") && classTag.startsWith("d")) {
+              waitTime = parseInt(classTag.replace("ms", "").replace("d", ""))
+            }
+          })
+
+          console.log(waitTime);
+
+          setTimeout(() => {
+            scrollElement.classList.remove("fadein")
+          }, waitTime + 500)
         }
       })
     }

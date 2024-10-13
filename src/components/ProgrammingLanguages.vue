@@ -35,18 +35,31 @@ export default {
         }
     },
 
+    methods: {
+        isInFadeIn(element) {
+            return element.classList.contains("fadein") || element.classList.contains("fadeinonscroll")
+        }
+    },
+
     mounted() {
         const languageElements = document.querySelectorAll(".languages-container-language")
 
         languageElements.forEach((languageElement) => {
             languageElement.addEventListener("mouseenter", () => {
-                languageElements.forEach(b => b.setAttribute("data-state", "not-hovered"))
+                if (window.screen.width <= 1024) return;
+                if (this.isInFadeIn(languageElement)) return;
+                languageElements.forEach(b => {
+                    if (this.isInFadeIn(b)) return;
+                    b.setAttribute("data-state", "not-hovered")
+                })
                 languageElement.setAttribute("data-state", "neutral")
             })
         })
 
         languageElements.forEach((languageElement) => {
             languageElement.addEventListener("mouseleave", () => {
+                if (window.screen.width <= 1024) return;
+                if (this.isInFadeIn(languageElement)) return;
                 languageElements.forEach(b => b.setAttribute("data-state", "neutral"))
             })
         })

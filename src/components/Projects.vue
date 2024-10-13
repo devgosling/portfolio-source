@@ -9,7 +9,7 @@
                     <p class="project-description secondarytext">{{ project.description }}</p>
                     <div v-if="project.extra" class="primarytext" style="display: flex; gap: 0.3rem; align-items: center; margin-bottom: 0.4rem; font-size: 0.85rem"><i :class="project.extra.icon" style="font-size: 0.7rem;"></i>{{ project.extra.text }}</div>
                     <div class="project-tags">
-                        <Tag :class="'project-tag fadeinonscroll d' + ((tindex + 1) * 100 + 200) + 'ms'"  v-for="(tag, tindex) in project.tags" :value="tag" rounded severity="primary" />
+                        <Tag :class="'project-tag fadeinonscroll d' + ((tindex + 1) * 100 + 100) + 'ms'"  v-for="(tag, tindex) in project.tags" :value="tag" rounded severity="primary" />
                     </div>
                 </div>
             </a>
@@ -84,6 +84,12 @@ export default {
             ]
         }
     },
+    
+    methods: {
+        isInFadeIn(element) {
+            return element.classList.contains("fadein") || element.classList.contains("fadeinonscroll")
+        }
+    },
 
     mounted() {
         const projectElements = document.querySelectorAll(".project-element")
@@ -91,7 +97,12 @@ export default {
         projectElements.forEach((projectElement) => {
             projectElement.addEventListener("mouseenter", () => {
                 if (window.screen.width <= 1024) return;
-                projectElements.forEach(b => b.setAttribute("data-state", "not-hovered"))
+                if (this.isInFadeIn(projectElement)) return;
+
+                projectElements.forEach(b => {
+                    if (this.isInFadeIn(b)) return;
+                    b.setAttribute("data-state", "not-hovered")
+                })
                 projectElement.setAttribute("data-state", "neutral")
             })
         })
@@ -99,6 +110,7 @@ export default {
         projectElements.forEach((projectElement) => {
             projectElement.addEventListener("mouseleave", () => {
                 if (window.screen.width <= 1024) return;
+                if (this.isInFadeIn(projectElement)) return;
                 projectElements.forEach(b => b.setAttribute("data-state", "neutral"))
             })
         })

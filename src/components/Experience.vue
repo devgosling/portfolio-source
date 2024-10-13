@@ -11,7 +11,7 @@
                     </div>
                     <p class="experience-description secondarytext">{{ experience.description }}</p>
                     <div class="experience-tags">
-                        <Tag :class="'experience-tag fadeinonscroll d' + ((tindex + 1) * 100 + 200) + 'ms'" v-for="(tag, tindex) in experience.tags" :value="tag" rounded severity="primary" />
+                        <Tag :class="'experience-tag fadeinonscroll d' + ((tindex + 1) * 100 + 100) + 'ms'" v-for="(tag, tindex) in experience.tags" :value="tag" rounded severity="primary" />
                     </div>
                 </div>
             </a>
@@ -84,6 +84,12 @@ export default {
         }
     },
 
+    methods: {
+        isInFadeIn(element) {
+            return element.classList.contains("fadein") || element.classList.contains("fadeinonscroll")
+        }
+    },
+
     mounted() {
 
         const experienceElements = document.querySelectorAll(".experience-element")
@@ -91,7 +97,11 @@ export default {
         experienceElements.forEach((experienceElement) => {
             experienceElement.addEventListener("mouseenter", () => {
                 if (window.screen.width <= 1024) return;
-                experienceElements.forEach(b => b.setAttribute("data-state", "not-hovered"))
+                if (this.isInFadeIn(experienceElement)) return;
+                experienceElements.forEach(b => {
+                    if (this.isInFadeIn(b)) return;
+                    b.setAttribute("data-state", "not-hovered")
+                })
                 experienceElement.setAttribute("data-state", "neutral")
             })
         })
@@ -99,6 +109,7 @@ export default {
         experienceElements.forEach((experienceElement) => {
             experienceElement.addEventListener("mouseleave", () => {
                 if (window.screen.width <= 1024) return;
+                if (this.isInFadeIn(experienceElement)) return;
                 experienceElements.forEach(b => b.setAttribute("data-state", "neutral"))
             })
         })

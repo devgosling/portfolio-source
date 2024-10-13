@@ -38,18 +38,31 @@ export default {
         }
     },
 
+    methods: {
+        isInFadeIn(element) {
+            return element.classList.contains("fadein") || element.classList.contains("fadeinonscroll")
+        }
+    },
+
     mounted() {
         const libraryElements = document.querySelectorAll(".libraries-container-library")
 
         libraryElements.forEach((libraryElement) => {
             libraryElement.addEventListener("mouseenter", () => {
-                libraryElements.forEach(b => b.setAttribute("data-state", "not-hovered"))
+                if (window.screen.width <= 1024) return;
+                if (this.isInFadeIn(libraryElement)) return;
+                libraryElements.forEach(b => {
+                    if (this.isInFadeIn(b)) return;
+                    b.setAttribute("data-state", "not-hovered")
+                })
                 libraryElement.setAttribute("data-state", "neutral")
             })
         })
 
         libraryElements.forEach((libraryElement) => {
             libraryElement.addEventListener("mouseleave", () => {
+                if (window.screen.width <= 1024) return;
+                if (this.isInFadeIn(libraryElement)) return;
                 libraryElements.forEach(b => b.setAttribute("data-state", "neutral"))
             })
         })
