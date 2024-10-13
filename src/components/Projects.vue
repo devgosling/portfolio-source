@@ -3,7 +3,7 @@
         <span class="title primarytext" id="projects">PROJEKTE</span>
         <div class="project-container">
             <a class="project-element" data-state="neutral" v-for="project in projects" :key="project.index" :href="project.link" target="_blank">
-                <img class="project-img" :src="project.image" alt="" draggable="false">
+                <img class="project-img" :src="'/portofolio' + project.image" alt="" draggable="false">
                 <div class="project-content">
                     <span class="project-title">{{ project.title }} <i v-if="project.link" class="fa-solid fa-arrow-up-right project-title-arrow"></i></span>
                     <p class="project-description secondarytext">{{ project.description }}</p>
@@ -90,6 +90,7 @@ export default {
 
         projectElements.forEach((projectElement) => {
             projectElement.addEventListener("mouseenter", () => {
+                if (window.screen.width <= 1024) return;
                 projectElements.forEach(b => b.setAttribute("data-state", "not-hovered"))
                 projectElement.setAttribute("data-state", "neutral")
             })
@@ -97,6 +98,7 @@ export default {
 
         projectElements.forEach((projectElement) => {
             projectElement.addEventListener("mouseleave", () => {
+                if (window.screen.width <= 1024) return;
                 projectElements.forEach(b => b.setAttribute("data-state", "neutral"))
             })
         })
@@ -154,7 +156,8 @@ export default {
     width: 90%;
     aspect-ratio: 16 / 9;
     border-radius: 0.4rem;
-    border: 0.15rem solid rgba(226, 232, 240, 0.1);
+    border: 0.15rem solid;
+    border-color: rgba(226, 232, 240, 0.1);
     object-fit: cover;
 
     transition: 0.15s;
@@ -224,5 +227,47 @@ export default {
 .project-tag .p-tag-label {
     font-weight: 500;
     padding: 0.1rem;
+}
+
+@media screen and (max-width: 1200px) {
+  /*Tablets*/
+  .project-element:hover .project-img {
+    border-color: rgba(226, 232, 240, 0.1);
+  }
+
+  .project-element:hover {
+    background-color: inherit;
+    box-shadow: inherit;
+  }
+
+  .project-element:hover * .project-title {
+    color: inherit;
+  }
+
+  .project-element:hover * .project-title-arrow {
+    transform: inherit;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /*Phones*/
+
+  .projects {
+    padding-top: 3rem;
+  }
+
+  .project-element {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .project-img {
+    margin-top: 0.5rem;
+    max-width: 50%;
+  }
+
+  .project-description {
+    font-size: 0.85rem;
+  }
 }
 </style>
