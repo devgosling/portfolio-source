@@ -65,7 +65,7 @@ export default {
                     title: "Game Development",
                     company: "ish (YouTuber)",
                     period: "AUG 2021 — MAI 2022",
-                    description: "Minecraft-Pluginentwicklung für Spielexperimente mit tausenden Tielnehmern für einen englischen YouTube Kanal mit derzeitigen 500.000 Abonnenten. Minecraft-Server mit Shard-Kompatibilität um mehr als 1.000 Spieler gleichzeitig auf einer Minecraft-Welt handhaben zu können.",
+                    description: "Minecraft-Pluginentwicklung für Spielexperimente mit tausenden Teilnehmern für einen englischen YouTube Kanal mit derzeitigen 500.000 Abonnenten. Minecraft-Server mit Shard-Kompatibilität um mehr als 1.000 Spieler gleichzeitig auf einer Minecraft-Welt handhaben zu können.",
                     tags: ["Java", "Sharding", "Bungeecord"],
                     positions: ["Game Developer"],
                     link: "https://www.youtube.com/@ish"
