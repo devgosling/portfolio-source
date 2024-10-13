@@ -16,7 +16,7 @@
     transition: 0.15s;
 
     animation-name: emailpopup;
-    animation-delay: 2000ms;
+    animation-delay: 3000ms;
     animation-duration: 1s;
     animation-fill-mode: forwards;
 }
@@ -24,10 +24,12 @@
 @keyframes emailpopup {
     from {
         bottom: -25rem;
+        opacity: 0;
     }
 
     to {
         bottom: 0rem;
+        opacity: 1;
     }
 }
 

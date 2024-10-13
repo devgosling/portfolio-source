@@ -1,20 +1,20 @@
 <template>
     <div class="projects">
-        <span class="title primarytext fadein d2600ms" id="projects">PROJEKTE</span>
+        <span class="title primarytext fadeinonscroll d100ms" id="projects">PROJEKTE</span>
         <div class="project-container">
-            <a :class="'project-element fadein d' + ((index + 1) * 100 + 2600) + 'ms'" data-state="neutral" v-for="(project, index) in projects" :key="project.index" :href="project.link" target="_blank">
+            <a :class="'project-element fadeinonscroll d100ms'" data-state="neutral" v-for="(project, index) in projects" :key="project.index" :href="project.link" target="_blank">
                 <img class="project-img" :src="'/portfolio' + project.image" alt="" draggable="false">
                 <div class="project-content">
                     <span class="project-title">{{ project.title }} <i v-if="project.link" class="fa-solid fa-arrow-up-right project-title-arrow"></i></span>
                     <p class="project-description secondarytext">{{ project.description }}</p>
                     <div v-if="project.extra" class="primarytext" style="display: flex; gap: 0.3rem; align-items: center; margin-bottom: 0.4rem; font-size: 0.85rem"><i :class="project.extra.icon" style="font-size: 0.7rem;"></i>{{ project.extra.text }}</div>
                     <div class="project-tags">
-                        <Tag class="project-tag"  v-for="tag in project.tags" :value="tag" rounded severity="primary" />
+                        <Tag :class="'project-tag fadeinonscroll d' + ((tindex + 1) * 100 + 200) + 'ms'"  v-for="(tag, tindex) in project.tags" :value="tag" rounded severity="primary" />
                     </div>
                 </div>
             </a>
         </div>
-        <span class="subtitle primarytext fadein d3200ms">Und noch vieles mehr...</span>
+        <span class="subtitle primarytext fadeinonscroll d100ms">Und noch vieles mehr...</span>
     </div>
 </template>
 <script>

@@ -10,9 +10,9 @@
         <span class="navpoint fadein d900ms" @click="navigateTo(0)" :data-active="navIndex == 0">ÜBER MICH</span>
         <span class="navpoint fadein d1000ms" @click="navigateTo(1)" :data-active="navIndex == 1">ERFAHRUNG</span>
         <span class="navpoint fadein d1100ms" @click="navigateTo(2)" :data-active="navIndex == 2">PROJEKTE</span>
-        <!--<span class="navpoint" @click="navigateTo(3)" :data-active="navIndex == 3">PROGRAMMIERSPRACHEN</span>
-        <span class="navpoint" @click="navigateTo(4)" :data-active="navIndex == 4">LIBRARIES & FRAMEWORKS</span>
-        <span class="navpoint" @click="navigateTo(5)" :data-active="navIndex == 5">TOOLS & PLATTFORMEN</span>-->
+        <span class="navpoint fadein d1200ms" @click="navigateTo(3)" :data-active="navIndex == 3">PROGRAMMIERSPRACHEN</span>
+        <span class="navpoint fadein d1300ms" @click="navigateTo(4)" :data-active="navIndex == 4">LIBRARIES & FRAMEWORKS</span>
+        <span class="navpoint fadein d1400ms" @click="navigateTo(5)" :data-active="navIndex == 5">TOOLS & PLATTFORMEN</span>
       </div>
       <div class="socials">
         <a :class="'social fadein d' + (parseInt(index) * 100 + 1300) + 'ms'" v-for="(social, index) in socials" :href="social[1]" target="_blank"><i :class="social[0]"></i></a>
@@ -39,7 +39,9 @@ export default {
         document.getElementById("aboutme"),
         document.getElementById("erfahrung"),
         document.getElementById("projects"),
-        //document.getElementById("programminglanguages")
+        document.getElementById("programminglanguages"),
+        document.getElementById("libraries"),
+        document.getElementById("tools"),
       ]
 
       elementsByIndex[index].scrollIntoView({ behavior: "smooth" })
@@ -47,7 +49,7 @@ export default {
     isOnScreenOrPassed(elm) {
       var rect = elm.getBoundingClientRect();
       var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
-      return !(rect.top - viewHeight + viewHeight / 1.5 >= 0);
+      return !(rect.top - viewHeight + viewHeight / 1.9 >= 0);
     }
   },
 
@@ -55,12 +57,24 @@ export default {
     document.addEventListener("scroll", (event) => {
       const experienceElement = document.getElementById("erfahrung")
       const projectsElement = document.getElementById("projects")
-      //const languagesElement = document.getElementById("programminglanguages")
+      const languagesElement = document.getElementById("programminglanguages")
+      const librariesElement = document.getElementById("libraries")
+      const toolsElement = document.getElementById("tools")
 
-      //if (this.isOnScreenOrPassed(languagesElement)) {
-      //  this.navIndex = 3;
-      //  return;
-      //}
+      if (this.isOnScreenOrPassed(toolsElement)) {
+        this.navIndex = 5;
+        return;
+      }
+
+      if (this.isOnScreenOrPassed(librariesElement)) {
+        this.navIndex = 4;
+        return;
+      }
+
+      if (this.isOnScreenOrPassed(languagesElement)) {
+        this.navIndex = 3;
+        return;
+      }
 
       if (this.isOnScreenOrPassed(projectsElement)) {
         this.navIndex = 2;

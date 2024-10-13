@@ -6,20 +6,27 @@
 
       <Experience />
       <Projects />
+      <ProgrammingLanguages />
+      <Libraries /> 
+      <Tools /> 
 
-      <p class="credits-p fadein d3300ms">Einfach designt in <a href="https://www.figma.com" target="_blank">Figma</a> und programmiert in <a href="https://code.visualstudio.com" target="_blank">Visual Studio Code</a>. Erstellt mit <a href="https://vuejs.org" target="_blank">Vue.js</a> und <a href="https://primevue.org" target="_blank">Primevue</a>, deployed mit <a href="https://vite.dev" target="_blank">Vite</a>. Text ist auf die <a href="https://rsms.me/inter/" target="_blank">Inter</a> Schriftart gesetzt.</p>
+      <p class="credits-p fadeinonscroll d500ms">Einfach designt in <a href="https://www.figma.com" target="_blank">Figma</a> und programmiert in <a href="https://code.visualstudio.com" target="_blank">Visual Studio Code</a>. Erstellt mit <a href="https://vuejs.org" target="_blank">Vue.js</a> und <a href="https://primevue.org" target="_blank">Primevue</a>, deployed mit <a href="https://vite.dev" target="_blank">Vite</a>. Text ist auf die <a href="https://rsms.me/inter/" target="_blank">Inter</a> Schriftart gesetzt.</p>
     </div>
 </template>
 <script>
 import Experience from "@/components/Experience.vue"
 import Projects from "./Projects.vue";
 import ProgrammingLanguages from "./ProgrammingLanguages.vue";
+import Libraries from "./Libraries.vue";
+import Tools from "./Tools.vue";
 
 export default {
   components: {
     Experience,
     Projects,
-    ProgrammingLanguages
+    ProgrammingLanguages,
+    Libraries,
+    Tools
   }
 }
 </script>
@@ -44,8 +51,8 @@ export default {
 
   width: 90%;
 
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-top: 7rem;
+  margin-bottom: 7rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }

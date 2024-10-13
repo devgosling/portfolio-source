@@ -1,10 +1,10 @@
 <template>
     <div class="languages">
-        <span class="title primarytext" id="programminglanguages">PROGRAMMIERSPRACHEN</span>
+        <span class="title primarytext fadeinonscroll d100ms" id="programminglanguages">PROGRAMMIERSPRACHEN</span>
         <div class="languages-container">
-            <div class="languages-container-language" v-for="language in programmingLanguages">
+            <div :class="'languages-container-language fadeinonscroll d' + ((index + 1) * 100) + 'ms'" v-for="(language, index) in programmingLanguages" data-state="neutral">
                 <div>
-                    <img :src="language[0]" :data-name="language[0].replace('/', '').replace('.png', '')" draggable="false">
+                    <img :src="'/portfolio' + language[0]" :data-name="language[0].replace('/', '').replace('.png', '')" draggable="false">
                 </div>
             </div>
         </div>
@@ -30,23 +30,24 @@ export default {
                 ["/SQL.png"],
                 ["/HTML.png"],
                 ["/CSS.png"],
+                ["/LUA.png"],
             ]
         }
     },
 
     mounted() {
-        const projectElements = document.querySelectorAll(".project-element")
+        const languageElements = document.querySelectorAll(".languages-container-language")
 
-        projectElements.forEach((projectElement) => {
-            projectElement.addEventListener("mouseenter", () => {
-                projectElements.forEach(b => b.setAttribute("data-state", "not-hovered"))
-                projectElement.setAttribute("data-state", "neutral")
+        languageElements.forEach((languageElement) => {
+            languageElement.addEventListener("mouseenter", () => {
+                languageElements.forEach(b => b.setAttribute("data-state", "not-hovered"))
+                languageElement.setAttribute("data-state", "neutral")
             })
         })
 
-        projectElements.forEach((projectElement) => {
-            projectElement.addEventListener("mouseleave", () => {
-                projectElements.forEach(b => b.setAttribute("data-state", "neutral"))
+        languageElements.forEach((languageElement) => {
+            languageElement.addEventListener("mouseleave", () => {
+                languageElements.forEach(b => b.setAttribute("data-state", "neutral"))
             })
         })
     }
@@ -70,16 +71,17 @@ export default {
 .languages-container {
     padding: 1rem;
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 20% 20% 20% 20% 20%;
 
     border-radius: 0.5rem;
 
     transition: 0.15s;
+
 }
 
 .languages-container:hover {
-    background-color: rgba(30, 41, 59, 0.5);
-    box-shadow: inset 0 1px 0 0 rgba(148, 163, 184, 0.1);
+    /*background-color: rgba(30, 41, 59, 0.5);
+    box-shadow: inset 0 1px 0 0 rgba(148, 163, 184, 0.1);`*/
 
 }
 
@@ -87,13 +89,20 @@ export default {
     aspect-ratio: 1;
     width: 100%;
 
-    padding: 0.3rem;
+    padding-right: 0.4rem;
+    padding-bottom: 0.4rem;
 
     font-weight: 700;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    transition: 0.15s;
+}
+
+.languages-container-language[data-state=not-hovered] {
+    opacity: 0.5;
 }
 
 .languages-container-language div {
@@ -104,19 +113,19 @@ export default {
     align-items: center;
     justify-content: center;
 
-    background-color: rgba(186, 202, 223, 0.313);
+    background-color: rgba(113, 123, 136, 0.19);
 
-    --filter: brightness(.4) grayscale(1);
-
-    opacity: 0.7;
+    opacity: 0.6;
 
     transition: 0.15s;
     border-radius: 0.5rem;
+    border: 2px rgba(255, 255, 255, 0.2) solid;
 }
 
 .languages-container-language div:hover {
     filter: brightness(1) grayscale(0);
     opacity: 1;
+    border: 2px rgba(255, 255, 255, 0.4) solid;
 }
 
 .languages-container-language div img {
@@ -154,6 +163,10 @@ export default {
 }
 
 .languages-container-language div img[data-name=CSS] {
+    max-height: 65%;
+}
+
+.languages-container-language div img[data-name=LUA] {
     max-height: 65%;
 }
 </style>

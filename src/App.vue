@@ -48,6 +48,19 @@ export default {
       this.mouseX = event.clientX
       this.mouseY = event.clientY
     }
+
+    document.onscroll = (event) => {
+      let onScrollElements = document.querySelectorAll(".fadeinonscroll")
+
+      onScrollElements.forEach((scrollElement) => {
+        var distanceToView = scrollElement.getBoundingClientRect().top - window.innerHeight + 20;
+        console.log(distanceToView);
+        if (distanceToView < 0 && scrollElement.classList.contains("fadeinonscroll")) {
+          scrollElement.classList.add("fadein")
+          scrollElement.classList.remove("fadeinonscroll")
+        }
+      })
+    }
   }
 }
 </script>
