@@ -3,12 +3,18 @@
       <div class="upper">
         <span class="name primarytext">Steven Kukla</span>
         <span class="job primarytext">Hobby Fullstack Developer</span>
-        <span class="catchline secondarytext">Ich erstelle pixel-perfekte, ansprechende, und zugängliche digitale Erlebnisse.</span>
+        <span class="catchline secondarytext">Ich erstelle qualitative, ansprechende, und zugängliche digitale Erlebnisse.</span>
       </div>
       <div class="navigation">
         <span class="navpoint" @click="navigateTo(0)" :data-active="navIndex == 0">ÜBER MICH</span>
         <span class="navpoint" @click="navigateTo(1)" :data-active="navIndex == 1">ERFAHRUNG</span>
         <span class="navpoint" @click="navigateTo(2)" :data-active="navIndex == 2">PROJEKTE</span>
+        <!--<span class="navpoint" @click="navigateTo(3)" :data-active="navIndex == 3">PROGRAMMIERSPRACHEN</span>
+        <span class="navpoint" @click="navigateTo(4)" :data-active="navIndex == 4">LIBRARIES & FRAMEWORKS</span>
+        <span class="navpoint" @click="navigateTo(5)" :data-active="navIndex == 5">TOOLS & PLATTFORMEN</span>-->
+      </div>
+      <div class="socials">
+        <a class="social" v-for="social in socials" :href="social[1]" target="_blank"><i :class="social[0]"></i></a>
       </div>
     </div>
 </template>
@@ -17,20 +23,87 @@ export default {
   data() {
     return {
       navIndex: 0,
+      socials: [
+        ["fa-brands fa-tiktok", "https://www.tiktok.com/@callsign.epsilon"],
+        ["fa-brands fa-discord", "https://discord.com/users/672320029781655552"],
+        ["fa-brands fa-github", "https://github.com/devgosling"],
+        ["fa-solid fa-at", "mailto:devgosling@googlemail.com"],
+      ],
     }
   },
 
   methods: {
     navigateTo(index) {
-      this.navIndex = index;
+      const elementsByIndex = [ 
+        document.getElementById("aboutme"),
+        document.getElementById("erfahrung"),
+        document.getElementById("projects"),
+        //document.getElementById("programminglanguages")
+      ]
+
+      elementsByIndex[index].scrollIntoView({ behavior: "smooth" })
+    },
+    isOnScreenOrPassed(elm) {
+      var rect = elm.getBoundingClientRect();
+      var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+      return !(rect.top - viewHeight + viewHeight / 1.5 >= 0);
     }
+  },
+
+  mounted() {
+    document.addEventListener("scroll", (event) => {
+      const experienceElement = document.getElementById("erfahrung")
+      const projectsElement = document.getElementById("projects")
+      //const languagesElement = document.getElementById("programminglanguages")
+
+      //if (this.isOnScreenOrPassed(languagesElement)) {
+      //  this.navIndex = 3;
+      //  return;
+      //}
+
+      if (this.isOnScreenOrPassed(projectsElement)) {
+        this.navIndex = 2;
+        return;
+      }
+
+      if (this.isOnScreenOrPassed(experienceElement)) {
+        this.navIndex = 1;
+        return;
+      }
+
+      this.navIndex = 0;
+    })
   }
 }
 </script>
 <style lang="scss">
 .leftside {
   padding-top: 5rem;
+  padding-bottom: 5rem;
+  height: 90vh;
   width: 100%;
+
+  position: sticky;
+  top: 0;
+}
+
+.socials {
+  position: absolute;
+  bottom: 0;
+
+  display: flex;
+  font-size: 1.5rem;
+
+  gap: 1rem;
+}
+
+.social {
+  color: rgb(148, 163, 184);
+  transition: 0.15s;
+}
+
+.social:hover {
+  color: rgb(226, 232, 240);
 }
 
 .leftside .upper {
@@ -62,7 +135,7 @@ export default {
 
   margin-top: 5rem;
   font-size: 0.82rem;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.13rem;
   font-weight: 700;
 }
 

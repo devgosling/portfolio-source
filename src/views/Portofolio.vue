@@ -20,5 +20,7 @@ export default {
   display: grid;
   grid-template-columns: 50% 50%;
   width: 100%;
+
+  position: relative;
 } 
 </style>
