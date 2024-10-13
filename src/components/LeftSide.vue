@@ -4,6 +4,7 @@
         <span class="name primarytext">Steven Kukla</span>
         <span class="job primarytext">Hobby Fullstack Developer</span>
         <span class="catchline secondarytext">Ich erstelle qualitative, ansprechende, und zugängliche digitale Erlebnisse.</span>
+        <span class="email"><a href="mailto:devgosling@googlemail.com">devgosling@googlemail.com</a></span>
       </div>
       <div class="navigation">
         <span class="navpoint" @click="navigateTo(0)" :data-active="navIndex == 0">ÜBER MICH</span>
@@ -129,6 +130,10 @@ export default {
     line-height: 1.5;
 
     width: 70%;
+  }
+
+  .email {
+    margin-top: 0.15rem;
   }
 }
 

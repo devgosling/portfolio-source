@@ -2,14 +2,17 @@
   <div>
     <div :style="getGradientPos()" />
     <RouterView class="routerview" />
+    <EmailLink style="position: fixed;" />
   </div>
 </template>
 <script> 
 import { RouterView } from 'vue-router';
+import EmailLink from "@/components/EmailLink.vue"
 
 export default {
   components: {
-    RouterView
+    RouterView,
+    EmailLink
   },
 
   data() {

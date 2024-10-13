@@ -164,6 +164,7 @@ export default {
     color: rgb(98, 108, 121);
 
     padding-top: 0.3rem;
+    padding-right: 0.3rem;
 }
 
 .experience-title {

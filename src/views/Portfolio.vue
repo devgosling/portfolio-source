@@ -6,12 +6,14 @@
 </template>
 <script>
 import LeftSide from "@/components/LeftSide.vue"
-import RightSide from "@/components/RightSide.vue";
+import RightSide from "@/components/RightSide.vue"; 
+import EmailLink from "@/components/EmailLink.vue"
 
 export default {
   components: {
     LeftSide,
-    RightSide
+    RightSide,
+    EmailLink
   }
 }
 </script>
