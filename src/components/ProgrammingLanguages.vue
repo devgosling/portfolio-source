@@ -3,9 +3,9 @@
         <span class="title primarytext fadeinonscroll d100ms" id="programminglanguages">PROGRAMMIERSPRACHEN</span>
         <div class="languages-container">
             <div :class="'languages-container-language fadeinonscroll d' + ((index + 1) * 100) + 'ms'" v-for="(language, index) in programmingLanguages" data-state="neutral">
-                <div>
+                <a :href="language[1]" target="_blank">
                     <img :src="'/portfolio' + language[0]" :data-name="language[0].replace('/', '').replace('.png', '')" draggable="false">
-                </div>
+                </a>
             </div>
         </div>
     </div>
@@ -22,15 +22,15 @@ export default {
     data() {
         return {
             programmingLanguages: [
-                ["/JavaScript.png"],
-                ["/Java.png"],
-                ["/CPP.png"],
-                ["/CS.png"],
-                ["/Python.png"],
-                ["/SQL.png"],
-                ["/HTML.png"],
-                ["/CSS.png"],
-                ["/LUA.png"],
+                ["/JavaScript.png", 'https://de.wikipedia.org/wiki/JavaScript'],
+                ["/Java.png", 'https://www.java.com/de/'],
+                ["/CPP.png", 'https://cplusplus.com'],
+                ["/CS.png", 'https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps'],
+                ["/Python.png", 'https://www.python.org'],
+                ["/SQL.png", 'https://de.wikipedia.org/wiki/SQL'],
+                ["/HTML.png", 'https://de.wikipedia.org/wiki/Hypertext_Markup_Language'],
+                ["/CSS.png", 'https://de.wikipedia.org/wiki/Cascading_Style_Sheets'],
+                ["/LUA.png", 'https://www.lua.org'],
             ]
         }
     },
@@ -118,13 +118,15 @@ export default {
     opacity: 0.5;
 }
 
-.languages-container-language div {
+.languages-container-language a {
     width: 100%;
     height: 100%;
 
-    display: flex;
+    display: flex block;
     align-items: center;
     justify-content: center;
+
+    cursor: pointer;
 
     background-color: rgba(113, 123, 136, 0.19);
 
@@ -135,51 +137,51 @@ export default {
     border: 2px rgba(255, 255, 255, 0.2) solid;
 }
 
-.languages-container-language div:hover {
+.languages-container-language a:hover {
     filter: brightness(1) grayscale(0);
     opacity: 1;
     border: 2px rgba(255, 255, 255, 0.4) solid;
 }
 
-.languages-container-language div img {
+.languages-container-language a img {
     stroke-width: 0px;
     object-fit: scale-down;    
 }
 
-.languages-container-language div img[data-name=JavaScript] {
+.languages-container-language a img[data-name=JavaScript] {
     height: 65%;
     border-radius: 0.3rem;
 }
 
-.languages-container-language div img[data-name=Java] {
+.languages-container-language a img[data-name=Java] {
     max-height: 80%;
 }
 
-.languages-container-language div img[data-name=CPP] {
+.languages-container-language a img[data-name=CPP] {
     max-width: 70%;
 }
 
-.languages-container-language div img[data-name=CS] {
+.languages-container-language a img[data-name=CS] {
     max-width: 65%;
 }
 
-.languages-container-language div img[data-name=Python] {
+.languages-container-language a img[data-name=Python] {
     max-width: 65%;
 }
 
-.languages-container-language div img[data-name=SQL] {
+.languages-container-language a img[data-name=SQL] {
     max-height: 65%;
 }
 
-.languages-container-language div img[data-name=HTML] {
+.languages-container-language a img[data-name=HTML] {
     max-height: 65%;
 }
 
-.languages-container-language div img[data-name=CSS] {
+.languages-container-language a img[data-name=CSS] {
     max-height: 65%;
 }
 
-.languages-container-language div img[data-name=LUA] {
+.languages-container-language a img[data-name=LUA] {
     max-height: 65%;
 }
 </style>

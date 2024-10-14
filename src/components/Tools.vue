@@ -3,9 +3,9 @@
         <span class="title primarytext fadeinonscroll d100ms" id="tools">TOOLS & PLATTFORMEN</span>
         <div class="tools-container">
             <div :class="'tools-container-tool fadeinonscroll d' + ((index + 1) * 100) + 'ms'" v-for="(tool, index) in tools" data-state="neutral">
-                <div>
+                <a :href="tool[1]" target="_blank">
                     <img :src="'/portfolio' + tool[0]" :data-name="tool[0].replace('/', '').replace('.png', '')" draggable="false">
-                </div>
+                </a>
             </div>
         </div>
     </div>
@@ -22,15 +22,15 @@ export default {
     data() {
         return {
             tools: [
-                ["/Git.png"],
-                ["/GitHub.png"],
-                ["/Heroku.png"],
-                ["/Firebase.png"],
-                ["/Supabase.png"],
-                ["/Webpack.png"],
-                ["/Roblox.png"],
-                ["/Glitch.png"],
-                ["/Replit.png"],
+                ["/Git.png", "https://git-scm.com"],
+                ["/GitHub.png", "https://github.com"],
+                ["/Heroku.png", "https://www.heroku.com"],
+                ["/Firebase.png", "https://firebase.google.com"],
+                ["/Supabase.png", "https://supabase.com"],
+                ["/Webpack.png", "https://webpack.js.org"],
+                ["/Roblox.png", "https://create.roblox.com"],
+                ["/Glitch.png", "https://glitch.com"],
+                ["/Replit.png", "https://repl.it"],
             ]
         }
     },
@@ -118,13 +118,15 @@ export default {
     opacity: 0.5;
 }
 
-.tools-container-tool div {
+.tools-container-tool a {
     width: 100%;
     height: 100%;
 
-    display: flex;
+    display: flex block;
     align-items: center;
     justify-content: center;
+
+    cursor: pointer;
 
     background-color: rgba(113, 123, 136, 0.19);
 
@@ -135,51 +137,51 @@ export default {
     border: 2px rgba(255, 255, 255, 0.2) solid;
 }
 
-.tools-container-tool div:hover {
+.tools-container-tool a:hover {
     filter: brightness(1) grayscale(0);
     opacity: 1;
     border: 2px rgba(255, 255, 255, 0.4) solid;
 }
 
-.tools-container-tool div img {
+.tools-container-tool a img {
     stroke-width: 0px;
     object-fit: scale-down;    
 }
 
-.tools-container-tool div img[data-name=Git] {
+.tools-container-tool a img[data-name=Git] {
     width: 65%;
 }
 
-.tools-container-tool div img[data-name=GitHub] {
+.tools-container-tool a img[data-name=GitHub] {
     width: 65%;
 }
 
-.tools-container-tool div img[data-name=Heroku] {
+.tools-container-tool a img[data-name=Heroku] {
     width: 85%;
     filter: brightness(2.5);
 }
 
-.tools-container-tool div img[data-name=Firebase] {
+.tools-container-tool a img[data-name=Firebase] {
     width: 65%;
 }
 
-.tools-container-tool div img[data-name=Roblox] {
+.tools-container-tool a img[data-name=Roblox] {
     width: 65%;
 }
 
-.tools-container-tool div img[data-name=Supabase] {
+.tools-container-tool a img[data-name=Supabase] {
     width: 65%;
 }
 
-.tools-container-tool div img[data-name=Webpack] {
+.tools-container-tool a img[data-name=Webpack] {
     width: 65%;
 }
 
-.tools-container-tool div img[data-name=Glitch] {
+.tools-container-tool a img[data-name=Glitch] {
     width: 75%;
 }
 
-.tools-container-tool div img[data-name=Replit] {
+.tools-container-tool a img[data-name=Replit] {
     width: 70%;
 }
 </style>

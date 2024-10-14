@@ -2,7 +2,7 @@
     <div class="experience">
         <span class="title primarytext fadein d2000ms" id="erfahrung">ERFAHRUNG</span>
         <div class="experience-container">
-            <a :class="'experience-element fadeinonscroll d100ms'" data-state="neutral" v-for="(experience, index) in experiences" :key="experience.index" :href="experience.link" target="_blank">
+            <a :class="['experience-element', index == 0 ? 'fadein d2100ms' : index == 1 ? 'fadein d2200ms' : 'fadeinonscroll d100ms']" data-state="neutral" v-for="(experience, index) in experiences" :key="experience.index" :href="experience.link" target="_blank">
                 <span class="period">{{ experience.period }}</span>
                 <div class="experience-content">
                     <span class="experience-title">{{ experience.title }} · {{ experience.company }} <i class="fa-solid fa-arrow-up-right experience-title-arrow"></i></span>

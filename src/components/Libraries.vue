@@ -3,9 +3,9 @@
         <span class="title primarytext fadeinonscroll d100ms" id="libraries">LIBRARIES & FRAMEWORKS</span>
         <div class="libraries-container">
             <div :class="'libraries-container-library fadeinonscroll d' + ((index + 1) * 100) + 'ms'" v-for="(library, index) in libraries" data-state="neutral">
-                <div>
+                <a :href="library[1]" target="_blank">
                     <img :src="'/portfolio' + library[0]" :data-name="library[0].replace('/', '').replace('.png', '')" draggable="false">
-                </div>
+                </a>
             </div>
         </div>
     </div>
@@ -22,18 +22,18 @@ export default {
     data() {
         return {
             libraries: [
-                ["/NodeJS.png"],
-                ["/Express.png"],
-                ["/Vue.png"],
-                ["/React.png"],
-                ["/DiscordJS.png"],
-                ["/Tailwind.png"],
-                ["/PrimeVue.png"],
-                ["/Rage.png"],
-                ["/Bukkit.png"],
-                ["/PaperMC.png"],
-                ["/BungeeCord.png"],
-                ["/Nukkit.png"],
+                ["/NodeJS.png", 'https://nodejs.org/en'],
+                ["/Express.png", 'https://expressjs.com'],
+                ["/Vue.png", "https://vuejs.org"],
+                ["/React.png", 'https://react.dev'],
+                ["/DiscordJS.png", 'https://discord.js.org'],
+                ["/Tailwind.png", 'https://tailwindcss.com'],
+                ["/PrimeVue.png", "https://primevue.org"],
+                ["/Rage.png", "https://de.wikipedia.org/wiki/Rockstar_Advanced_Game_Engine"],
+                ["/Bukkit.png", "https://dev.bukkit.org"],
+                ["/PaperMC.png", "https://papermc.io"],
+                ["/BungeeCord.png", "https://www.spigotmc.org/wiki/bungeecord/"],
+                ["/Nukkit.png", "https://github.com/CloudburstMC/Nukkit"],
             ]
         }
     },
@@ -121,13 +121,15 @@ export default {
     opacity: 0.5;
 }
 
-.libraries-container-library div {
+.libraries-container-library a {
     width: 100%;
     height: 100%;
 
-    display: flex;
+    display: flex block;
     align-items: center;
     justify-content: center;
+
+    cursor: pointer;
 
     background-color: rgba(113, 123, 136, 0.19);
 
@@ -138,62 +140,62 @@ export default {
     border: 2px rgba(255, 255, 255, 0.2) solid;
 }
 
-.libraries-container-library div:hover {
+.libraries-container-library a:hover {
     filter: brightness(1) grayscale(0);
     opacity: 1;
     border: 2px rgba(255, 255, 255, 0.4) solid;
 }
 
-.libraries-container-library div img {
+.libraries-container-library a img {
     stroke-width: 0px;
     object-fit: scale-down;    
 }
 
-.libraries-container-library div img[data-name=NodeJS] {
+.libraries-container-library a img[data-name=NodeJS] {
     width: 65%;
 }
 
-.libraries-container-library div img[data-name=Vue] {
+.libraries-container-library a img[data-name=Vue] {
     width: 65%;
 }
 
-.libraries-container-library div img[data-name=React] {
+.libraries-container-library a img[data-name=React] {
     width: 65%;
 }
 
-.libraries-container-library div img[data-name=DiscordJS] {
+.libraries-container-library a img[data-name=DiscordJS] {
     width: 85%;
 }
 
-.libraries-container-library div img[data-name=Tailwind] {
+.libraries-container-library a img[data-name=Tailwind] {
     width: 65%;
 }
 
-.libraries-container-library div img[data-name=PrimeVue] {
+.libraries-container-library a img[data-name=PrimeVue] {
     height: 65%;
 }
 
-.libraries-container-library div img[data-name=Rage] {
+.libraries-container-library a img[data-name=Rage] {
     width: 75%;
 }
 
-.libraries-container-library div img[data-name=Bukkit] {
+.libraries-container-library a img[data-name=Bukkit] {
     height: 65%;
 }
 
-.libraries-container-library div img[data-name=PaperMC] {
+.libraries-container-library a img[data-name=PaperMC] {
     height: 65%;
 }
 
-.libraries-container-library div img[data-name=BungeeCord] {
+.libraries-container-library a img[data-name=BungeeCord] {
     width: 110%;
 }
 
-.libraries-container-library div img[data-name=Express] {
+.libraries-container-library a img[data-name=Express] {
     width: 75%;
 }
 
-.libraries-container-library div img[data-name=Nukkit] {
+.libraries-container-library a img[data-name=Nukkit] {
     width: 65%;
     border-radius: 0.3rem;
 }

@@ -69,7 +69,7 @@ export default {
 
           setTimeout(() => {
             scrollElement.classList.remove("fadein")
-          }, waitTime + 500)
+          }, waitTime + 500 + 250)
         }
       })
     }
