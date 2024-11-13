@@ -3,7 +3,7 @@
         <span class="title primarytext fadeinonscroll d100ms" id="projects">PROJEKTE</span>
         <div class="project-container">
             <a :class="'project-element fadeinonscroll d100ms'" data-state="neutral" v-for="(project, index) in projects" :key="project.index" :href="project.link" target="_blank">
-                <img class="project-img" :src="'/portfolio' + project.image" alt="" draggable="false">
+                <img class="project-img" :src="'' + project.image" alt="" draggable="false">
                 <div class="project-content">
                     <span class="project-title">{{ project.title }} <i v-if="project.link" class="fa-solid fa-arrow-up-right project-title-arrow"></i></span>
                     <p class="project-description secondarytext">{{ project.description }}</p>

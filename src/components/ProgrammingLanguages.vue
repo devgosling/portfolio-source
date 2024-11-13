@@ -4,7 +4,7 @@
         <div class="languages-container">
             <div :class="'languages-container-language fadeinonscroll d' + ((index + 1) * 100) + 'ms'" v-for="(language, index) in programmingLanguages" data-state="neutral">
                 <a :href="language[1]" target="_blank">
-                    <img :src="'/portfolio' + language[0]" :data-name="language[0].replace('/', '').replace('.png', '')" draggable="false">
+                    <img :src="'' + language[0]" :data-name="language[0].replace('/', '').replace('.png', '')" draggable="false">
                 </a>
             </div>
         </div>

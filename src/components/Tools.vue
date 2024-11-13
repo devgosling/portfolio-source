@@ -4,7 +4,7 @@
         <div class="tools-container">
             <div :class="'tools-container-tool fadeinonscroll d' + ((index + 1) * 100) + 'ms'" v-for="(tool, index) in tools" data-state="neutral">
                 <a :href="tool[1]" target="_blank">
-                    <img :src="'/portfolio' + tool[0]" :data-name="tool[0].replace('/', '').replace('.png', '')" draggable="false">
+                    <img :src="'' + tool[0]" :data-name="tool[0].replace('/', '').replace('.png', '')" draggable="false">
                 </a>
             </div>
         </div>

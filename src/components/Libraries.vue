@@ -4,7 +4,7 @@
         <div class="libraries-container">
             <div :class="'libraries-container-library fadeinonscroll d' + ((index + 1) * 100) + 'ms'" v-for="(library, index) in libraries" data-state="neutral">
                 <a :href="library[1]" target="_blank">
-                    <img :src="'/portfolio' + library[0]" :data-name="library[0].replace('/', '').replace('.png', '')" draggable="false">
+                    <img :src="'' + library[0]" :data-name="library[0].replace('/', '').replace('.png', '')" draggable="false">
                 </a>
             </div>
         </div>
