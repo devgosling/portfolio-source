@@ -32,9 +32,19 @@ export default {
             experiences: [
                 {
                     index: 0,
+                    title: "Digitalisierung & Softwareentwicklung",
+                    company: "Kromholz Wassertechnik",
+                    period: "JULI 2025 - HEUTE",
+                    description: "Arbeit als Systemadministrator um System zu warten, Server zu verwalten und das Unternehmen zu digitalisieren. Anwendung zum erstellen, verwalten, einsehen und versenden von Wartungsberichten für Motoren, Pumpen, Lüfter, Müllanlagen, Schmutzwasser-/Fäkalienhebeanlagen und Tauchmotorpumpenschmutzwasser entwickelt um Mitarbeitern Arbeit zu erleichtern und zur Digitalisierung des Unternehmens beiträgt.",
+                    tags: ["JavaScript", "VueJS", "HTML & CSS", "SCSS", "Node.js", "Appwrite"],
+                    positions: ["IT-Systemadministrator", "IT-Anwendungsentwickler"],
+                    link: "https://kromholz-wassertechnik.de/"
+                },
+                {
+                    index: 0,
                     title: "Serverentwicklung",
                     company: "Apexure Roleplay",
-                    period: "APRIL — OKT 2024",
+                    period: "APRIL — MAI 2025",
                     description: "Leistungsstarkes Front- und Backend erstellt und gewartet sowie mit VueJS 2 das Game User Interface erstellt. Dashboard für Spieladministratoren erstellt für die Überprüfung von Spieldaten und zur Durchsuchung von Spielprotokolle. Authentifizierungssystem mit E-Mail Verifizierung durch einen SMTP-Server erstellt.",
                     tags: ["C#", "JavaScript", "VueJS", "HTML & CSS", "SCSS", "Node.js"],
                     positions: ["Projektmanagement", "Entwicklungsleitung"],
@@ -95,7 +105,7 @@ export default {
         const experienceElements = document.querySelectorAll(".experience-element")
 
         experienceElements.forEach((experienceElement) => {
-            experienceElement.addEventListener("mouseenter", () => {
+            experienceElement.addEventListener("mouseover", () => {
                 if (window.screen.width <= 1024) return;
                 if (this.isInFadeIn(experienceElement)) return;
                 experienceElements.forEach(b => {

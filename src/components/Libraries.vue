@@ -48,7 +48,7 @@ export default {
         const libraryElements = document.querySelectorAll(".libraries-container-library")
 
         libraryElements.forEach((libraryElement) => {
-            libraryElement.addEventListener("mouseenter", () => {
+            libraryElement.addEventListener("mouseover", () => {
                 if (window.screen.width <= 1024) return;
                 if (this.isInFadeIn(libraryElement)) return;
                 libraryElements.forEach(b => {

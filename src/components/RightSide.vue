@@ -6,6 +6,7 @@
 
       <Experience />
       <Projects />
+      <Education />
       <ProgrammingLanguages />
       <Libraries /> 
       <Tools /> 
@@ -19,6 +20,7 @@ import Projects from "./Projects.vue";
 import ProgrammingLanguages from "./ProgrammingLanguages.vue";
 import Libraries from "./Libraries.vue";
 import Tools from "./Tools.vue";
+import Education from "./Education.vue";
 
 export default {
   components: {
@@ -26,7 +28,8 @@ export default {
     Projects,
     ProgrammingLanguages,
     Libraries,
-    Tools
+    Tools,
+    Education
   }
 }
 </script>
@@ -51,7 +54,7 @@ export default {
 
   width: 90%;
 
-  margin-top: 7rem;
+  margin-top: 10vh;
   margin-bottom: 7rem;
   padding-left: 1rem;
   padding-right: 1rem;

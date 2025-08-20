@@ -45,7 +45,7 @@ export default {
         const toolElements = document.querySelectorAll(".tools-container-tool")
 
         toolElements.forEach((toolElement) => {
-            toolElement.addEventListener("mouseenter", () => {
+            toolElement.addEventListener("mouseover", () => {
                 if (window.screen.width <= 1024) return;
                 if (this.isInFadeIn(toolElement)) return;
                 toolElements.forEach(b => {

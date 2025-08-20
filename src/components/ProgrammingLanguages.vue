@@ -45,7 +45,7 @@ export default {
         const languageElements = document.querySelectorAll(".languages-container-language")
 
         languageElements.forEach((languageElement) => {
-            languageElement.addEventListener("mouseenter", () => {
+            languageElement.addEventListener("mouseover", () => {
                 if (window.screen.width <= 1024) return;
                 if (this.isInFadeIn(languageElement)) return;
                 languageElements.forEach(b => {

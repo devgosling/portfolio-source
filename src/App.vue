@@ -42,6 +42,12 @@ export default {
   },
 
   mounted() {
+    document.onanimationend = (event) => {
+      if (event.animationName == "fadein" && event.target.classList.contains("fadein")) {
+        event.target.classList.remove("fadein")
+      }
+    }
+
     document.onmousemove = (event) => {
       if (window.screen.width <= 1024) return;
       let gradient = document.getElementById("radial-gradient-mouse")
@@ -65,11 +71,9 @@ export default {
             }
           })
 
-          console.log(waitTime);
-
-          setTimeout(() => {
-            scrollElement.classList.remove("fadein")
-          }, waitTime + 500 + 250)
+          //setTimeout(() => {
+          //  scrollElement.classList.remove("fadein")
+          //}, waitTime + 500 + 250)
         }
       })
     }

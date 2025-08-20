@@ -95,7 +95,7 @@ export default {
         const projectElements = document.querySelectorAll(".project-element")
 
         projectElements.forEach((projectElement) => {
-            projectElement.addEventListener("mouseenter", () => {
+            projectElement.addEventListener("mouseover", () => {
                 if (window.screen.width <= 1024) return;
                 if (this.isInFadeIn(projectElement)) return;
 
