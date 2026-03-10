@@ -31,23 +31,19 @@ export default {
             projects: [
                 {
                     index: 0,
+                    title: "Online Essenbestellungsapp (In Entwicklung)",
+                    image: "/Bestellando.png",
+                    description: "Eine moderne Essenbestellungsapp für Online Bestellungen ähnlich wie Lieferando. Diese wird als Projekt der Karl-Hofmann-Schule BBS Worms entwickelt.",
+                    tags: ["JavaScript", "React", "React Native", "PrimeReact", "PrimeFlex", "Node.js", "Appwrite", "Express", "NestJS", "PostgreSQL"],
+                    link: "https://github.com/devgosling/bestellando"
+                },
+                {
+                    index: 0,
                     title: "Admin Control Panel für Spielserver",
                     image: "/ACP.png",
                     description: "Admin Control Panel für Spieladministratoren mit Firebase und eigener Express API. Benutzer- und Rollenverwaltungssystem mit Berechtigungen durch MySQL Datenbank.",
                     tags: ["JavaScript", "VueJS", "PrimeVue", "Node.js", "Firebase", "APIs", "Express", "MySQL"],
                     link: ""
-                },
-                {
-                    index: 0,
-                    title: "Website für Spielserver",
-                    image: "/APEXURE_WEBSITE.png",
-                    description: "Einfache Website für Grand Theft Auto 5 Rollenspiel Spielserver mit FAQ System und erklärung wie man dem Server beitritt sowie Disclaimer für rechtliche Sicherheit.",
-                    tags: ["JavaScript", "VueJS", "CSS/SCSS", "Node.js"],
-                    link: "https://gta5apexure.de",
-                    extra: {
-                        icon: "fa-solid fa-user",
-                        text: "25.000+ Gesamte Aufrufe"
-                    },
                 },
                 {
                     index: 0,
@@ -71,14 +67,6 @@ export default {
                     },
                     description: "Verifizierter Discord Bot, welcher den RRS-Feed von den Kategorien die ein Benutzer eingestellt hat ausließt und sobald eine neue Nachricht in dieser Kategorie erscheint automatisch in einen vom Benutzer angegeben Discord Textkanal sendet.",
                     tags: ["JavaScript", "RRS Reader", "Node.js", "Discord.js"],
-                    link: ""
-                },
-                {
-                    index: 0,
-                    title: "Nookazon Werbeblocker",
-                    image: "/NOOKAZON.png",
-                    description: "Simpler Werbeblocker um einen bestimmten Werbetyp den andere Werbeblocker nicht erkennen zu blockieren und zu entfernen.",
-                    tags: ["JavaScript", "Chromium"],
                     link: ""
                 },
             ]

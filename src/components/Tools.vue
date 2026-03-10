@@ -28,6 +28,7 @@ export default {
                 ["/Firebase.png", "https://firebase.google.com"],
                 ["/Supabase.png", "https://supabase.com"],
                 ["/Webpack.png", "https://webpack.js.org"],
+                ["/Vite.png", "https://vite.dev"],
                 ["/Roblox.png", "https://create.roblox.com"],
                 ["/Glitch.png", "https://glitch.com"],
                 ["/Replit.png", "https://repl.it"],
@@ -174,6 +175,10 @@ export default {
 }
 
 .tools-container-tool a img[data-name=Webpack] {
+    width: 65%;
+}
+
+.tools-container-tool a img[data-name=Vite] {
     width: 65%;
 }
 

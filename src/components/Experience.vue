@@ -30,65 +30,35 @@ export default {
     data() {
         return {
             experiences: [
-                {
+            {
                     index: 0,
                     title: "Digitalisierung & Softwareentwicklung",
+                    company: "WPK Prozesstechnik",
+                    period: "FEB 2026 - HEUTE",
+                    description: "Arbeit als Systemadministrator um System zu warten, Server zu verwalten und das Unternehmen zu digitalisieren. Anwendung zum erstellen, verwalten, einsehen und versenden von Wartungsberichten für Motoren, Pumpen, Lüfter, Müllanlagen, Schmutzwasser-/Fäkalienhebeanlagen, Enthärtungsanlagen und Tauchmotorpumpenschmutzwasser entwickelt um Mitarbeitern Arbeit zu erleichtern und zur Digitalisierung des Unternehmens beiträgt.",
+                    tags: ["JavaScript", "VueJS", "HTML & CSS", "SCSS", "Node.js", "Appwrite", "PWAs"],
+                    positions: ["IT-Systemadministrator auf Minijobbasis", "IT-Anwendungsentwickler auf Minijobbasis"],
+                    link: "https://wpk-prozesstechnik.de"
+                },
+                {
+                    index: 0,
+                    title: "Entwicklung einer Social Media Plattform",
+                    company: "ThrustX GmbH",
+                    period: "SEP 2025 - HEUTE",
+                    description: "Arbeit als Anwendungsentwickler für die Entwicklung der neuen Version der Community Plattform \"iBoYs\" – Die größte Community für Schwule und Bisexuelle Jungs im alter von 14 bis 29 Jahren aus Österreich, Deutschland und der Schweiz.",
+                    tags: ["JavaScript", "VueJS", "HTML & CSS", "SCSS", "Node.js", "Appwrite", "NestJS", "React", "Capacitor"],
+                    positions: ["IT-Anwendungsentwickler auf Freiwilligenbasis"],
+                    link: "https://iboys.at"
+                },
+            {
+                    index: 1,
+                    title: "Digitalisierung & Softwareentwicklung",
                     company: "Kromholz Wassertechnik",
-                    period: "JULI 2025 - HEUTE",
-                    description: "Arbeit als Systemadministrator um System zu warten, Server zu verwalten und das Unternehmen zu digitalisieren. Anwendung zum erstellen, verwalten, einsehen und versenden von Wartungsberichten für Motoren, Pumpen, Lüfter, Müllanlagen, Schmutzwasser-/Fäkalienhebeanlagen und Tauchmotorpumpenschmutzwasser entwickelt um Mitarbeitern Arbeit zu erleichtern und zur Digitalisierung des Unternehmens beiträgt.",
-                    tags: ["JavaScript", "VueJS", "HTML & CSS", "SCSS", "Node.js", "Appwrite"],
-                    positions: ["IT-Systemadministrator", "IT-Anwendungsentwickler"],
+                    period: "JULI 2025 - FEB 2026",
+                    description: "Arbeit als Systemadministrator um System zu warten, Server zu verwalten und das Unternehmen zu digitalisieren. Anwendung zum erstellen, verwalten, einsehen und versenden von Wartungsberichten für Motoren, Pumpen, Lüfter, Müllanlagen, Schmutzwasser-/Fäkalienhebeanlagen, Enthärtungsanlagen und Tauchmotorpumpenschmutzwasser entwickelt um Mitarbeitern Arbeit zu erleichtern und zur Digitalisierung des Unternehmens beiträgt.",
+                    tags: ["JavaScript", "VueJS", "HTML & CSS", "SCSS", "Node.js", "Appwrite", "PWAs"],
+                    positions: ["IT-Systemadministrator auf Minijobbasis", "IT-Anwendungsentwickler auf Minijobbasis"],
                     link: "https://kromholz-wassertechnik.de/"
-                },
-                {
-                    index: 0,
-                    title: "Serverentwicklung",
-                    company: "Apexure Roleplay",
-                    period: "APRIL — MAI 2025",
-                    description: "Leistungsstarkes Front- und Backend erstellt und gewartet sowie mit VueJS 2 das Game User Interface erstellt. Dashboard für Spieladministratoren erstellt für die Überprüfung von Spieldaten und zur Durchsuchung von Spielprotokolle. Authentifizierungssystem mit E-Mail Verifizierung durch einen SMTP-Server erstellt.",
-                    tags: ["C#", "JavaScript", "VueJS", "HTML & CSS", "SCSS", "Node.js"],
-                    positions: ["Projektmanagement", "Entwicklungsleitung"],
-                    link: "https://gta5apexure.de"
-                },
-                {
-                    index: 0,
-                    title: "Spielentwicklung",
-                    company: "SCP: Site Roleplay",
-                    period: "MAI 2023 — JAN 2024",
-                    description: "UI/UX Designer und Programmierer für ein Roblox Rollenspiel um das fiktive Thema „Secure. Contain. Protect.“ indem Anomalien in einer unterirdischen Einrichtung gesichert, gehalten und beschützt werden.",
-                    tags: ["Lua", "JavaScript", "Node.js", "Express"],
-                    positions: ["UI/UX Designer", "Programmer"],
-                    link: "https://www.roblox.com/games/3226555017/SCP-Site-Roleplay"
-                },
-                {
-                    index: 0,
-                    title: "Game Development",
-                    company: "LifeBoat Network",
-                    period: "JUL 2022 — FEB 2023",
-                    description: "Wiedereintritt in das LifeBoat Network Serverteam als Plugin Developer und Administrator für Spielsysteme. Entwicklung eines Application Programming Interface verbunden mit Minecraft-Befehlen um die Arbeit für Spielmoderatoren zu vereinfachen.",
-                    tags: ["Java", "Nukkit", "Node.js", "Express"],
-                    positions: ["Plugin Developer", "Administrator"],
-                    link: "https://www.lbsg.net"
-                },
-                {
-                    index: 0,
-                    title: "Game Development",
-                    company: "ish (YouTuber)",
-                    period: "AUG 2021 — MAI 2022",
-                    description: "Minecraft-Pluginentwicklung für Spielexperimente mit tausenden Teilnehmern für einen englischen YouTube Kanal mit derzeitigen 500.000 Abonnenten. Minecraft-Server mit Shard-Kompatibilität um mehr als 1.000 Spieler gleichzeitig auf einer Minecraft-Welt handhaben zu können.",
-                    tags: ["Java", "Sharding", "Bungeecord"],
-                    positions: ["Game Developer"],
-                    link: "https://www.youtube.com/@ish"
-                },
-                {
-                    index: 0,
-                    title: "Plugin Development",
-                    company: "LifeBoat Network",
-                    period: "FEB 2020 — MÄR 2021",
-                    description: "Minecraft-Pluginentwicklung für den Minecraft-Spielserver LifeBoat Network für verschiedene Minispiele in einem Servernetzwerk mit synchronisierten Datenbankeinträge.",
-                    tags: ["Java", "Nukkit"],
-                    positions: ["Junior Plugin Developer"],
-                    link: "https://www.lbsg.net"
                 },
             ]
         }

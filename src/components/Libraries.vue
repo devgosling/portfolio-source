@@ -25,6 +25,7 @@ export default {
                 ["/NodeJS.png", 'https://nodejs.org/en'],
                 ["/Express.png", 'https://expressjs.com'],
                 ["/Vue.png", "https://vuejs.org"],
+                ["/Capacitor.png", "https://capacitorjs.com"],
                 ["/React.png", 'https://react.dev'],
                 ["/DiscordJS.png", 'https://discord.js.org'],
                 ["/Tailwind.png", 'https://tailwindcss.com'],
@@ -160,6 +161,10 @@ export default {
 }
 
 .libraries-container-library a img[data-name=React] {
+    width: 65%;
+}
+
+.libraries-container-library a img[data-name=Capacitor] {
     width: 65%;
 }
 

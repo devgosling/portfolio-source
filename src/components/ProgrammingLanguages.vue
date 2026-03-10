@@ -23,6 +23,7 @@ export default {
         return {
             programmingLanguages: [
                 ["/JavaScript.png", 'https://de.wikipedia.org/wiki/JavaScript'],
+                ["/TypeScript.png", 'https://de.wikipedia.org/wiki/TypeScript'],
                 ["/Java.png", 'https://www.java.com/de/'],
                 ["/CPP.png", 'https://cplusplus.com'],
                 ["/CS.png", 'https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps'],
@@ -149,6 +150,11 @@ export default {
 }
 
 .languages-container-language a img[data-name=JavaScript] {
+    height: 65%;
+    border-radius: 0.3rem;
+}
+
+.languages-container-language a img[data-name=TypeScript] {
     height: 65%;
     border-radius: 0.3rem;
 }
