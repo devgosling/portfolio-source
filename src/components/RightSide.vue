@@ -1,8 +1,9 @@
 <template>
     <div class="rightside" id="aboutme">
-      <p class="about-p fadein d1500ms">Im Jahr 2019 wurde ich durch einen guten Freund aufmerksam von der Entwicklung von Discord Bots und stolperte in die programmierung mit NodeJS. Heutzutage habe ich bereits die Privilegien genießen können Software und alles drumerum für einen <a href="https://www.youtube.com/@ish" target="_blank">englischsprachigen YouTuber</a>, einem <a href="https://www.lbsg.net" target="_blank">Minecraft Bedrock Edition Server</a>, und einem <a href="https://gta5apexure.de" target="_blank">RAGE Mulitplayer Projekt</a> zu entwickeln. Zudem habe ich in dieser Zeit an vielen eigenen <a href="">Projekten</a> gearbeitet.</p>
+      <p class="about-p fadein d1500ms">Im Jahr 2019 wurde ich durch einen guten Freund aufmerksam von der Entwicklung von Discord Bots und stolperte in die programmierung mit NodeJS. Heutzutage habe ich bereits die Privilegien genießen können Software und alles drumerum für ein <a href="https://kromholz-wassertechnik.de/" target="_blank">Unternehmen für Wassertechnik</a>, der <a href="https://iboys.at" target="_blank">größten queeren Community Seite in DACH*</a>, und einem <a href="https://gta5apexure.de" target="_blank">RAGE Mulitplayer Projekt</a> zu entwickeln. Zudem habe ich in dieser Zeit an vielen eigenen <a href="">Projekten</a> gearbeitet.</p>
       <p class="about-p fadein d1700ms">Heutzutage liegt mein Fokus darauf, alles Mögliche zu automatisieren, um die Benutzung einer Software zu vereinfachen. Der Teil der mir am Programmieren am meisten Spaß macht, ist der Teil an dem sich Programmierung und Design treffen — Sachen, die gut aussehen, aber zugleich gut unter der Haube programmiert worden sind. In meiner Freizeit experimentiere ich gerne mit verschiedensten Dingen, um mein Wissen zu erweitern.</p>
       <p class="about-p fadein d1900ms">Wenn ich nicht am PC, bin ich meistens am Airsoft spielen in Koblenz, treffe mich mit Freunden, oder drehe TikTok Videos.</p>
+      <p class="about-p fadein d2000ms" style="font-size: 0.85rem;">* DACH: Deutschland, Österreich und der Schweiz</p>
 
       <Experience />
       <Projects />

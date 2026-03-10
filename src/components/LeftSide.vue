@@ -2,8 +2,8 @@
     <div class="leftside">
       <div class="upper">
         <span class="name primarytext d400ms fadein">Steven Kukla</span>
-        <span class="job primarytext d600ms fadein">Hobby Fullstack Developer</span>
-        <span class="catchline secondarytext d700ms fadein">Ich erstelle qualitative, ansprechende, und zugängliche digitale Erlebnisse.</span>
+        <span class="job primarytext d600ms fadein">Fullstack Softwareentwickler</span>
+        <span class="catchline secondarytext d700ms fadein">Ich erstelle qualitative, ansprechende, und zugängliche digitale Anwendungen.</span>
         <span class="email d800ms fadein"><a href="mailto:devgosling@googlemail.com">devgosling@googlemail.com</a></span>
       </div>
       <div class="navigation">
@@ -26,7 +26,7 @@ export default {
     return {
       navIndex: 0,
       socials: [
-        ["fa-brands fa-instagram", "https://www.instagram.com/devgosling"],
+        ["fa-brands fa-instagram", "https://www.instagram.com/steven.kukla"],
         ["fa-brands fa-discord", "https://discord.com/users/672320029781655552"],
         ["fa-brands fa-github", "https://github.com/devgosling"],
         ["fa-solid fa-at", "mailto:devgosling@googlemail.com"],
