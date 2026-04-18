@@ -5,7 +5,7 @@
             <a :class="['experience-element', index == 0 ? 'fadein d2100ms' : index == 1 ? 'fadein d2200ms' : 'fadeinonscroll d100ms']" data-state="neutral" v-for="(experience, index) in experiences" :key="experience.index" :href="experience.link" target="_blank">
                 <span class="period">{{ experience.period }}</span>
                 <div class="experience-content">
-                    <span class="experience-title">{{ experience.title }} · {{ experience.company }} <i class="fa-solid fa-arrow-up-right experience-title-arrow"></i></span>
+                    <span class="experience-title">{{ experience.title }} · {{ experience.company }} <Icon name="arrow-up-right" class="experience-title-arrow" /></span>
                     <div class="experience-positions">
                         <span v-for="position in experience.positions">{{ position }}</span>
                     </div>
@@ -20,11 +20,13 @@
 </template>
 <script>
 import Tag from 'primevue/tag';
+import Icon from "@/components/Icon.vue"
 
 export default {
 
     components: {
-        Tag
+        Tag,
+        Icon
     },
 
     data() {

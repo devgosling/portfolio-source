@@ -5,9 +5,9 @@
             <a :class="'project-element fadeinonscroll d100ms'" data-state="neutral" v-for="(project, index) in projects" :key="project.index" :href="project.link" target="_blank">
                 <img class="project-img" :src="'' + project.image" alt="" draggable="false">
                 <div class="project-content">
-                    <span class="project-title">{{ project.title }} <i v-if="project.link" class="fa-solid fa-arrow-up-right project-title-arrow"></i></span>
+                    <span class="project-title">{{ project.title }} <Icon v-if="project.link" name="arrow-up-right" class="project-title-arrow" /></span>
                     <p class="project-description secondarytext">{{ project.description }}</p>
-                    <div v-if="project.extra" class="primarytext" style="display: flex; gap: 0.3rem; align-items: center; margin-bottom: 0.4rem; font-size: 0.85rem"><i :class="project.extra.icon" style="font-size: 0.7rem;"></i>{{ project.extra.text }}</div>
+                    <div v-if="project.extra" class="primarytext" style="display: flex; gap: 0.3rem; align-items: center; margin-bottom: 0.4rem; font-size: 0.85rem"><Icon :name="project.extra.icon" style="font-size: 0.7rem;" />{{ project.extra.text }}</div>
                     <div class="project-tags">
                         <Tag :class="'project-tag fadeinonscroll d' + ((tindex + 1) * 100 + 100) + 'ms'"  v-for="(tag, tindex) in project.tags" :value="tag" rounded severity="primary" />
                     </div>
@@ -19,11 +19,13 @@
 </template>
 <script>
 import Tag from 'primevue/tag';
+import Icon from "@/components/Icon.vue"
 
 export default {
 
     components: {
-        Tag
+        Tag,
+        Icon
     },
 
     data() {
@@ -51,7 +53,7 @@ export default {
                     image: "/BUSSGELDRECHNER.png",
                     description: "Bussgeldrechner um sich für einen Grand Theft Auto 5 Rollenspiel Spielserver Bußgelder nach Auswahl berechnen zu lassen.",
                     extra: {
-                        icon: "fa-solid fa-user",
+                        icon: "user",
                         text: "2.000+ Monatliche Benutzer"
                     },
                     tags: ["JavaScript", "Html", "CSS", "GTag"],
@@ -62,7 +64,7 @@ export default {
                     title: "WELT Nachrichten Discord Bot",
                     image: "/WELT.png",
                     extra: {
-                        icon: "fa-brands fa-discord",
+                        icon: "discord",
                         text: "Auf 250+ Discord Servern"
                     },
                     description: "Verifizierter Discord Bot, welcher den RRS-Feed von den Kategorien die ein Benutzer eingestellt hat ausließt und sobald eine neue Nachricht in dieser Kategorie erscheint automatisch in einen vom Benutzer angegeben Discord Textkanal sendet.",

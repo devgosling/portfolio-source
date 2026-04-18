@@ -4,10 +4,10 @@
         <div class="education-container">
             <a :class="['education-element', 'fadeinonscroll d100ms']" data-state="neutral" v-for="(school, index) in education" :key="school.index" :href="school.link" target="_blank">
                 <div class="education-content">
-                    <span class="education-title">{{ school.title }} <i class="fa-solid fa-arrow-up-right education-title-arrow"></i></span>
+                    <span class="education-title">{{ school.title }} <Icon name="arrow-up-right" class="education-title-arrow" /></span>
                     <span class="period">{{ school.period }}</span>
                     <div class="education-diplomas" v-if="school.positions">
-                        <span v-for="position in school.positions"><i class="fa-regular fa-graduation-cap"></i> {{ position }}</span>
+                        <span v-for="position in school.positions"><Icon name="graduation-cap" /> {{ position }}</span>
                     </div>
                     <p class="education-description secondarytext" v-if="school.description">{{ school.description }}</p>
                 </div>
@@ -17,11 +17,13 @@
 </template>
 <script>
 import Tag from 'primevue/tag';
+import Icon from "@/components/Icon.vue"
 
 export default {
 
     components: {
-        Tag
+        Tag,
+        Icon
     },
 
     data() {

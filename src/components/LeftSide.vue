@@ -16,20 +16,26 @@
         <span class="navpoint fadein d1500ms" @click="navigateTo(6)" :data-active="navIndex == 6">TOOLS & PLATTFORMEN</span>
       </div>
       <div class="socials">
-        <a :class="'social fadein d' + (parseInt(index) * 100 + 1300) + 'ms'" v-for="(social, index) in socials" :href="social[1]" target="_blank"><i :class="social[0]"></i></a>
+        <a :class="'social fadein d' + (parseInt(index) * 100 + 1300) + 'ms'" v-for="(social, index) in socials" :href="social[1]" target="_blank"><Icon :name="social[0]" /></a>
       </div>
     </div>
 </template>
 <script>
+import Icon from "@/components/Icon.vue"
+
 export default {
+  components: {
+    Icon
+  },
+
   data() {
     return {
       navIndex: 0,
       socials: [
-        ["fa-brands fa-instagram", "https://www.instagram.com/steven.kukla"],
-        ["fa-brands fa-discord", "https://discord.com/users/672320029781655552"],
-        ["fa-brands fa-github", "https://github.com/devgosling"],
-        ["fa-solid fa-at", "mailto:devgosling@googlemail.com"],
+        ["instagram", "https://www.instagram.com/steven.kukla"],
+        ["discord", "https://discord.com/users/672320029781655552"],
+        ["github", "https://github.com/devgosling"],
+        ["at", "mailto:devgosling@googlemail.com"],
       ],
     }
   },

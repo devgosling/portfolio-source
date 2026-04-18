@@ -12,7 +12,7 @@
       <Libraries /> 
       <Tools /> 
 
-      <p class="credits-p fadeinonscroll d500ms">Einfach designt in <a href="https://www.figma.com" target="_blank">Figma</a> und programmiert in <a href="https://code.visualstudio.com" target="_blank">Visual Studio Code</a>. Erstellt mit <a href="https://vuejs.org" target="_blank">Vue.js</a> und <a href="https://primevue.org" target="_blank">Primevue</a>, deployed mit <a href="https://vite.dev" target="_blank">Vite</a>. Text ist auf die <a href="https://rsms.me/inter/" target="_blank">Inter</a> Schriftart gesetzt.</p>
+      <p class="credits-p fadeinonscroll d500ms">Einfach designt in <a href="https://www.figma.com" target="_blank">Figma</a> und programmiert in <a href="https://code.visualstudio.com" target="_blank">Visual Studio Code</a>. Erstellt mit <a href="https://vuejs.org" target="_blank">Vue.js</a> und <a href="https://primevue.org" target="_blank">Primevue</a>, gebaut mit <a href="https://vite.dev" target="_blank">Vite</a>. Text ist auf die <a href="https://rsms.me/inter/" target="_blank">Inter</a> Schriftart gesetzt.</p>
     </div>
 </template>
 <script>
